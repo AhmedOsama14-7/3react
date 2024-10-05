@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+nav h1 {
+  color: white;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  gap: 1.5rem;
+  padding-inline: 3rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.box {
+  width: calc((100% - 3rem) / 3);
+  border: 1px solid black;
+  border-radius: 1rem;
+  height: 30rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.box .img {
+  width: 100%;
+  height: 60%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.box .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.box .body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.box .body h2 {
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  display: -webkit-inline-box;
+  -webkit-box-orient: vertical;
+  font-size: 20px;
+}
+.box .body p {
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-inline-box;
+  -webkit-box-orient: vertical;
+}
+
+.singleProduct {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding-top: 5rem;
+  padding-inline: 4rem;
+}
+.singleProduct .photo {
+  width: 30%;
+  height: 80%;
+  padding: 1rem;
+  border: 1px solid black;
+}
+.singleProduct .photo img {
+  width: 100%;
+  height: 100%;
+}
+.singleProduct .details {
+  width: 60%;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.singleProduct .details .btns {
+  display: flex;
+  gap: 1rem;
+}
+.singleProduct .details .counter {
+  background: white;
+  height: 2.3rem;
+  width: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.singleProduct .details .addToCart {
+  width: 7rem;
+  color: white;
+  background: orange;
+  text-align: center;
+  cursor: pointer;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+.singleProduct .details .price {
+  font-weight: 400;
+}
+.singleProduct .details .des {
+  opacity: 0.6;
+}
+
+.shop_btn {
+  color: white;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader svg {
+  font-size: 3rem;
+  animation: loaderRotation infinite 2s linear alternate-reverse;
+}
+
+@keyframes loaderRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=index.css.map */
