@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductBox from '../productBox/ProductBox'
 import Loading from '../loading/Loading'
+import axios from 'axios'
 
 export default function Products() {
 
@@ -10,8 +11,9 @@ export default function Products() {
     const api = async () => {
       try{
 
-        const response = await fetch('https://fakestoreapi.com/products');
-        const finalres = await response.json()
+        const response = await axios.get('https://fakestoreapi.com/products')
+        const finalres = await response.data
+        
         
         if(response.status !== 200){
           setPosts([])
